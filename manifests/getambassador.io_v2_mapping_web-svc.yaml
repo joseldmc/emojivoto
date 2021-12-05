@@ -1,9 +1,10 @@
-apiVersion: getambassador.io/v2
+apiVersion: getambassador.io/v3alpha1
 kind: Mapping
 metadata:
   name: web
   namespace: emojivoto
 spec:
+  hostname: "*"
   prefix: /api/
   rewrite: /api/
   resolver: endpoint
