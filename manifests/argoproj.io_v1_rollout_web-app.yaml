@@ -52,7 +52,7 @@ spec:
       trafficRouting:
         ambassador:
           mappings:
-          - web-app
+          - emojivoto.web-app
   template:
     metadata:
       creationTimestamp: null
