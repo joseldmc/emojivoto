@@ -18,6 +18,10 @@ spec:
     canary:
       canaryService: web-app-canary
       stableService: web-app
+      trafficRouting:
+        ambassador:
+          mappings:
+          - web-app
       steps:
       - setWeight: 10
       - pause:
@@ -49,10 +53,6 @@ spec:
       - setWeight: 100
       - pause:
           duration: 12
-      trafficRouting:
-        ambassador:
-          mappings:
-          - emojivoto.web-app
   template:
     metadata:
       creationTimestamp: null
