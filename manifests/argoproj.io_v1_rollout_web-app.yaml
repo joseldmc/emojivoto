@@ -53,5 +53,4 @@ spec:
             cpu: 100m
       serviceAccountName: web-app
 status:
-  blueGreen: {}
   canary: {}
