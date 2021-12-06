@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: 307332ca-262a-4b6b-8f21-14f7ac7580e7
+    getambassador.io/rolloutId: 4e637b03-511a-478c-a5ee-6c2332836443
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: web-app
@@ -19,16 +19,7 @@ spec:
       canaryService: web-app-canary
       stableService: web-app
       steps:
-      - setWeight: 20
-      - pause:
-          duration: 60
-      - setWeight: 40
-      - pause:
-          duration: 60
-      - setWeight: 60
-      - pause:
-          duration: 60
-      - setWeight: 80
+      - setWeight: 50
       - pause:
           duration: 60
       - setWeight: 100
@@ -51,7 +42,7 @@ spec:
           value: "80"
         - name: INDEX_BUNDLE
           value: dist/index_bundle.js
-        image: danielbryantuk/emojivoto-web-app:v11.2
+        image: danielbryantuk/emojivoto-web-app:v11.3
         imagePullPolicy: Always
         name: web-app
         ports:
