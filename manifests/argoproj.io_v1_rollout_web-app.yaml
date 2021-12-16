@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: 3bb61188-27ae-48dc-bdec-fcdaf1d9d5bb
+    getambassador.io/rolloutId: 928759a6-cc9f-4235-8891-78da2e4c405b
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: web-app
@@ -21,13 +21,13 @@ spec:
       steps:
       - setWeight: 30
       - pause:
-          duration: 40
+          duration: 20
       - setWeight: 60
       - pause:
-          duration: 40
+          duration: 20
       - setWeight: 90
       - pause:
-          duration: 40
+          duration: 20
       trafficRouting:
         ambassador:
           mappings:
@@ -45,7 +45,7 @@ spec:
           value: "80"
         - name: INDEX_BUNDLE
           value: dist/index_bundle.js
-        image: danielbryantuk/emojivoto-web-app:v11.5
+        image: danielbryantuk/emojivoto-web-app:v11.6.ACA
         imagePullPolicy: Always
         name: web-app
         ports:
