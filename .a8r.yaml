@@ -3,3 +3,7 @@ k8s_config:
   cluster_info:
     cluster_id: 841529a5-c832-5623-97b8-7b8befc3feb6
     cluster_name: ClusterTwo
+- manifest_path: /manifest
+  cluster_info:
+    cluster_id: 50791956-1ae5-5877-ac7b-10b9400a5e5e
+    cluster_name: demo-prod-4070c8e3-c949-46e1-a427-21331ab5b04b
